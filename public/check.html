@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+    <title>CheckSplitter</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>CheckSplitter</h1>
+    </div>
+
+
+    <div class="container">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">Producto</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" id="newitem">
+        </div>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">Cantidad</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" id="newamount">
+        </div>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">Precio Total</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" id="newprice">
+
+        </div>
+        <div class="input-group mb-3">
+            <button class="btn btn-outline-secondary" type="button" onclick="additem()">Agregar</button>
+        </div>
+
+    </div>
+
+    <div class="container">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Item</th>
+                    <th scope="col">Cantidad</th>
+                    <th scope="col">Precio total</th>
+                    <th scope="col">Borrar</th>
+                </tr>
+            </thead>
+            <tbody id="items">
+            </tbody>
+        </table>
+        <hr>
+    </div>
+
+
+
+
+    <div class="container">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">Neto Total</span>
+            </div>
+            <input type="text" id="netototal" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" value="0.0" readonly>
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">ICO</span>
+            </div>
+            <input type="text" id="ico" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" value="0.0" readonly>
+        </div>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">Sub-Total</span>
+            </div>
+            <input type="text" id="subtotal" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" value="0.0" readonly>
+        </div>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">Propina</span>
+            </div>
+            <input type="text" id="propina" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" value="0.0" readonly>
+        </div>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">Total</span>
+            </div>
+            <input type="text" id="total" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" value="0.0" readonly>
+        </div>
+
+    </div>
+
+    <div class="container">
+        <button class="btn btn-outline-secondary" type="button" onclick="back()">Back</button>
+        <button class="btn btn-outline-secondary" type="button" onclick="gotoPeople()">Next</button>
+
+
+    </div>
+
+    <script type="text/javascript" src="js/check_script.js"></script>
+</body>
+
+</html>
